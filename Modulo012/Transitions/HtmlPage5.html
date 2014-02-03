@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            padding: 30px;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+        }
+
+        .original {
+            border: 1px dotted #000;
+            float: left;
+            margin-right: 50px;
+        }
+
+        #original, #transformado, #transformadoX, #transformadoY, #transformadoZ, #transformado3D {
+            color: #008;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #008;
+        }
+
+        #transformado {
+            transform: scale(2);
+        }
+
+        #transformadoX {
+            transform: scaleX(1.5);
+        }
+
+        #transformadoY {
+            transform: scaleY(2);
+        }
+
+        #transformadoZ {
+            transform: scaleZ(3);
+        }
+
+        #transformado3D {
+            /*transform: scale3d(1, 1, 0, 2);*/
+            transform: scaleX(2) scaleY(2); 
+        }
+    </style>
+</head>
+<body>
+    <div class="original">
+        <div id="original">original</div>
+    </div>
+
+    <div class="original">
+        <div id="transformado">XY</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoX">X</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoY">Y</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoZ">Z</div>
+    </div>
+
+    <div class="original">
+        <div id="transformado3D">3D</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function mostrar() {
+            //alert(document);
+            //alert(document.forms);
+            //alert(document.forms.length);
+            //alert(document.forms[0].elements);
+            //alert(document.forms[0].elements.length);
+            //for (var i in document.forms[0].elements) {
+            //    alert(i + "\n" + document.forms[0].elements[i]);
+            //}
+
+            //for (var i = 0; i < document.forms[0].elements.length; i++) {
+            //    alert(document.forms[0].elements[i].value);
+            //}
+
+            alert(document.getElementById("mandaBala").value);
+        }
+
+        function validar(frm) {
+            var retorno = true;
+
+            if (frm["nome"].value == "") {
+                frm["nome"].className = "erro";
+                retorno = false;
+            }
+
+            if (frm["senha"].value == "") {
+                frm["senha"].className = "erro";
+                retorno = false;
+            }
+
+            return retorno;
+        }
+
+        function enviar(frm) {
+            if (frm["nome"].value != ""
+                && frm["senha"].value != "")
+                frm.submit();
+            else
+                alert("preencha as bagacinhas");
+        }
+    </script>
+    <style type="text/css">
+        .erro {
+            color: #ff0;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body onload="javascript:mostrar();">
+    <form onsubmit="javascript:return validar(this);">
+        <p>
+            <label for="nome">Nome</label>
+            <br />
+            <input type="text" size="50" id="nome" />
+        </p>
+        <p>
+            <label for="senha">Senha</label>
+            <br />
+            <input type="password" size="20" id="senha" />
+        </p>
+        <p>
+            <input type="submit" value="enviar" id="mandaBala" />
+        </p>
+        <p>
+            <input type="button" value="enviar usando script" onclick="javascript: enviar(this.form);" />
+        </p>
+    </form>
+</body>
+</html>

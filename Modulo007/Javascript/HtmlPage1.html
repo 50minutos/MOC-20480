@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var x = 10;
+
+        document.writeln("<p>" + x + "</p>"); 
+
+        function foo() {
+            document.writeln("<p>" + x + "</p>"); 
+
+            var x = 1000;
+            //ou
+            //x = 1000;
+
+            document.writeln("<p>" + x + "</p>");
+        }
+
+        foo();
+
+        document.writeln("<p>" + x + "</p>"); 
+    </script>
+</head>
+<body>
+</body>
+</html>

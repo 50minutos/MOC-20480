@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #um, #dois, #tres {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        #um {
+            background-color: #666;
+            color: #fff;
+            transform: translate(300px, 0px);
+        }
+
+        #dois {
+            background-color: #ff0;
+            color: #000;
+            transform: rotate(45deg);
+        }
+
+        #tres {
+            background-color: #9f9;
+            color: #090;
+            transform: rotate(-45deg);
+            transform-origin: 100% 100%;
+            display: block;
+        }
+
+        #botao {
+            transform: rotate(45deg);
+            position:absolute;
+            top:200px;
+            left:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="um">um</div>
+    <div id="dois">dois</div>
+    <div id="tres">três</div>
+        <p>
+            <button id="botao">clique aqui</button>
+        </p>
+</body>
+</html>

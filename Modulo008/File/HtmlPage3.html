@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var fileName = document.getElementById('fileName');
+            var content = document.getElementById('content');
+
+            fileName.addEventListener('change', function (e) {
+                var file = fileName.files[0];
+                var fr = new FileReader();
+
+                fr.onload = function (e) {
+                    content.style.visibility = "visible";
+                    var img = new Image();
+                    img.src = fr.result;
+                    //alert(img.src);
+                    content.appendChild(img);
+                }
+
+                fr.readAsDataURL(file);
+        });
+        }
+    </script>
+</head>
+<body>
+    <h1>File Reader</h1>
+    <div>
+        Arquivo:
+        <input type="file" id="fileName" />
+    </div>
+    <div id="content" />
+</body>
+</html>

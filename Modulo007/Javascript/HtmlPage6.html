@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var Pessoa = function (codigo, nome, sexo) {
+            this.codigo = codigo;
+            this.nome = nome;
+            this.sexo = sexo;
+        };
+
+        Pessoa.prototype = {
+            toString: function () {
+                return this.codigo + " - " + this.nome + " - " + this.sexo;
+            }
+        };
+
+        var p = new Pessoa(1, "ADAO", "M");
+        alert(p);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

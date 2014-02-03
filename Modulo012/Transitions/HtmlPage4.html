@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            padding: 30px;
+        }
+
+        div {
+            height: 120px;
+            width: 120px;
+        }
+
+        #original, #transformadoX, #transformadoY, #transformadoZ, #transformado3D {
+            color: #fff;
+            background-color: #008;
+            text-align: center;
+        }
+
+        .original {
+            border: 1px dotted #000;
+            float: left;
+            margin-right: 50px;
+        }
+
+        #transformadoX {
+            transform: rotateX(45deg);
+        }
+
+        #transformadoY {
+            transform: rotateY(45deg);
+        }
+
+        #transformadoZ {
+            transform: rotateZ(45deg);
+        }
+
+        #transformado3D {
+            transform: rotate3d(1, 1, 0, 45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="original">
+        <div id="original">original</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoX">transformado X</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoY">transformado Y</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoZ">transformado Z</div>
+    </div>
+
+    <div class="original">
+        <div id="transformado3D">transformado 3D</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html manifest="/web.appcache">
+<head>
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+     <script>
+            function updateNet() {
+                document.getElementById('net').textContent = navigator.onLine ? 'online' : 'offline';
+            }
+        </script>
+</head>
+<body onload="javascript:updateNet();">
+    <div>
+        <a href="HtmlPage1.html">PÁGINA 1 - ONLINE/OFFLINE</a>
+        <a href="HtmlPage2.html">PÁGINA 2 - ONLINE/OFFLINE</a>
+        <a href="HtmlPage3.html">PÁGINA 3 - ONLINE</a>
+    </div>
+    <h1>Página 1</h1>
+    <p>Network: <span id="net">desconhecido</span>
+</body>
+</html>

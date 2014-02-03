@@ -1,0 +1,15 @@
+﻿CACHE MANIFEST
+
+#2014-01-29
+
+CACHE:
+/StyleSheet1.css
+/HtmlPage1.html
+/HtmlPage2.html
+/HtmlPage4.html
+
+NETWORK:
+/HtmlPage3.html
+
+FALLBACK:
+/ /HtmlPage4.html

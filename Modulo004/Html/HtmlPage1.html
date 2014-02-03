@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        input:valid {
+            border: 1px solid #ccc;
+        }
+
+        input:invalid {
+           /* border: 1px solid #f00;*/
+           background-color:#ddd;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #f00;
+        }
+
+        input:-ms-input-placeholder {
+            color: #f00;
+        }
+
+        input:-moz-placeholder {
+            color: #f00;
+        }
+
+        input::-moz-placeholder {
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Digite seus dados </legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <br />
+                <input type="text" maxlength="50" size="60" id="nome" placeholder="digite o seu nome aqui" title="nome do usuário" autofocus="autofocus" required="required" />
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <br />
+                <input type="password" maxlength="20" size="24" id="senha" placeholder="digite a sua senha aqui" title="senha do usuário" required="required" />
+            </p>
+            <p>
+                <label for="comidas">Comida preferida:</label>
+                <br />
+                <select id="comidas">
+                    <optgroup label="salgados">
+                        <option>arroz com feijão</option>
+                        <option>macarronada</option>
+                    </optgroup>
+                    <optgroup label="lanches">
+                        <option>pão com salame</option>
+                        <option>misto</option>
+                    </optgroup>
+                    <optgroup label="doces">
+                        <option>sorvete</option>
+                        <option>pudim de leite condensado</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="estadoCivil">Digite o seu estado civil</label>
+                <br />
+                <input type="text" list="estados" id="estadoCivil" />
+                <datalist id="estados">
+                    <option>solteiro</option>
+                    <option>casado</option>
+                    <option>divorciado</option>
+                    <option>outros</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="cep">CEP</label>
+                <br />
+                <input type="text" id="cep" pattern="[0-9]{5}-[0-9]{3}" title="99999-999" />
+            </p>
+            <p>
+                <label for="idade">Idade</label>
+                <br />
+                <input type="number" id="idade" min="18" max="99" title="idade do sujeito" />
+            </p>
+            <p>
+                <label for="nascimento">Data de nascimento</label>
+                <br />
+                <input type="date" value="1966-09-12" id="nascimento" title="data de nascimento" />
+            </p>
+        </fieldset>
+
+        <input type="submit" value="enviar" />
+    </form>
+</body>
+</html>

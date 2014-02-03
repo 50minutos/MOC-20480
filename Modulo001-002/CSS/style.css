@@ -1,0 +1,42 @@
+﻿/*configurações básicas*/
+* {
+    font-size: 90%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #ccc;
+    color: #666;
+    font-family: Verdana, sans-serif, Consolas;
+    padding:10px;
+}
+
+h1, p {
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 160%;
+    /*font-style: italic;*/
+    /*font-weight: lighter;*/
+    /*text-decoration: underline overline;*/
+    /*text-transform: uppercase;*/
+    /*background-color: #880;*/
+    padding: 10px; /*top+bottom+right+left*/
+    /*padding: 10px 20px;*/ /*top+bottom right+left*/
+    /*padding: 10px 20px 30px 40px;*/
+    /*TRouBLe*/
+    border: 2px dotted #666;
+}
+
+p {
+    text-align: justify;
+    color: #ccc;
+    /*opacity: 0.5;*/
+    line-height: 150%;
+    /*letter-spacing: 1px;*/
+    background-color: #000;
+    padding: 5px;
+}

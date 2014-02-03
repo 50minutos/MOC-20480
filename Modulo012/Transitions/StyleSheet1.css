@@ -1,0 +1,36 @@
+﻿body {
+    background-color: #ccc;
+    color: #000;
+    font-family: Verdana, arial, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    transition: all 3s;
+}
+
+    h1:hover {
+        font-weight: normal;
+        background-color: #fff;
+        transition: all 3s;
+    }
+
+p {
+    text-align: justify;
+    transition: color 1500ms;
+}
+
+    p:hover {
+        color: #fff;
+    }
+
+#header {
+    background-image: url(headerGray.gif);
+    width: 960px;
+    height: 150px;
+    margin: 0px auto;
+}
+
+    #header:hover {
+        background-image: url(header.gif);
+    }

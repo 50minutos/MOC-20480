@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        button {
+            margin-right: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        var es;
+
+        function start() {
+            if (typeof (EventSource) !== "undefined") {
+                var source = new EventSource("WebForm1.aspx");
+
+                source.onmessage = function (e) {
+                    document.getElementById("result").innerHTML = e.data + "<br>";
+                };
+            }
+            else {
+                document.getElementById("result").innerHTML = "sem suporte a server-sent events...";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <button onclick="javascript: start()">Start</button>
+    </p>
+
+    <h1><output id="result"></output></h1>
+</body>
+</html>

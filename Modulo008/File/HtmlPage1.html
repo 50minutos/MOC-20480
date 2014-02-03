@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        (function () {
+            function contentLoaded() {
+                var blob = new Blob(["alert('opa')"], { type: "text/javascript" });
+
+                var script = document.createElement('script');
+
+                script.setAttribute('src', window.URL.createObjectURL(blob));
+
+                document.body.appendChild(script);
+            }
+
+            window.addEventListener('DOMContentLoaded', contentLoaded, false);
+        })();
+    </script>
+</head>
+<body>
+</body>
+</html>

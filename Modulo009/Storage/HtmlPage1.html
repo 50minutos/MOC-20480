@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function enviar() {
+            if (typeof (Storage) == "object");
+            {
+                sessionStorage.setItem("nome", document.getElementById("nome").value);
+                location.href = "HtmlPage2.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="nome" type="text" />
+    <input type="button" value="clique aqui para enviar" onclick="javascript: enviar();" />
+</body>
+</html>

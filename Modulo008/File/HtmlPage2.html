@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var fileName = document.getElementById('fileName');
+            var content = document.getElementById('content');
+
+            fileName.addEventListener('change', function (e) {
+                var file = fileName.files[0];
+                var fr = new FileReader();
+
+                fr.onload = function (e) {
+                    content.innerText = fr.result;
+                }
+
+                fr.readAsText(file);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>File Reader</h1>
+    <div>
+        Arquivo:
+        <input type="file" id="fileName"/>
+    </div>
+    <pre id="content"></pre>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            padding: 30px;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+        }
+
+        .original {
+            border: 1px dotted #000;
+            float: left;
+            margin-right: 50px;
+        }
+
+        #original, #transformado, #transformadoX, #transformadoY {
+            color: #008;
+            text-align: center;
+            border: 1px solid #008;
+        }
+
+        #transformado {
+            transform: skew(15deg, 15deg);
+        }
+
+        #transformadoX {
+            transform: skewX(45deg);
+        }
+
+        #transformadoY {
+            transform: skewY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="original">
+        <div id="original">original</div>
+    </div>
+
+    <div class="original">
+        <div id="transformado">XY</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoX">X</div>
+    </div>
+
+    <div class="original">
+        <div id="transformadoY">Y</div>
+    </div>
+</body>
+</html>

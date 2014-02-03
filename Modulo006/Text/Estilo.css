@@ -1,0 +1,50 @@
+﻿@font-face
+{
+    font-family: 'Simpsonfont';
+    src: url('Simpsonfont.ttf') format('truetype');
+}
+
+body
+{
+    background-color: yellow;
+    color: darkblue;
+    font-family: Simpsonfont, Verdana, Arial;
+}
+
+img
+{
+    /*height: 20vh;*/
+    width: 20vw;
+    margin: 0px auto;
+    display: block;
+}
+
+p
+{
+    text-indent: 50px;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+}
+
+    p::first-letter
+    {
+        font-size: 50px;
+        text-shadow: 5px 5px 2px #aa0;
+    }
+
+::selection
+{
+    background-color: #fff;
+    color: #000;
+}
+
+h1
+{
+    text-shadow: 5px 5px 2px #aa0;
+    border: 1px dashed #f00;
+    /*outline-offset: 10px;*/
+    /*outline: 2px dotted #aa0;*/
+    padding: 5px;
+    text-align: center;
+    border-radius: 40px 20px;
+}

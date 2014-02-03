@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function escrever() {
+            document.getElementById("nome").innerHTML = localStorage.getItem("nome");
+
+            var p = JSON.parse(localStorage.getItem("p"));
+
+            if (p != null)
+                document.getElementById("pessoa").innerHTML = p.codigo + " - " + p.nome;
+
+            //document.getElementById("espacoLivre").innerHTML = Math.round(localStorage.remainingSpace * 100 / 1024 / 1024) / 100 + " MB";
+
+            document.getElementById("espacoLivre").innerHTML = localStorage.remainingSpace + " B";
+        }
+    </script>
+</head>
+<body onload="javascript:escrever();">
+    <h1 id="nome"></h1>
+    <h1 id="pessoa"></h1>
+    <h1 id="espacoLivre"></h1>
+</body>
+</html>

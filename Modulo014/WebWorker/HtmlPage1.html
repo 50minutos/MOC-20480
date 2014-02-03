@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        button {
+            margin-right: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        var w;
+
+        function start() {
+            if (typeof (Worker) !== "undefined") {
+                w = new Worker("demo.js");
+
+                w.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            }
+            else {
+                document.getElementById("result").innerHTML = "sem suporte a Web Workers...";
+            }
+        }
+
+        function stop() {
+            w.terminate();
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <button onclick="javascript: start()">Start</button>
+        <button onclick="javascript: stop()">Stop</button>
+    </p>
+
+    <h1><output id="result"></output></h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitionsTransformations", "Transitions\TransitionsTransformations.csproj", "{C484A09C-6075-4EAE-88BD-1FC2669B8971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "Animation\Animation.csproj", "{490D1A2A-D950-4915-87CC-6B43A49F8A9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C484A09C-6075-4EAE-88BD-1FC2669B8971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C484A09C-6075-4EAE-88BD-1FC2669B8971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C484A09C-6075-4EAE-88BD-1FC2669B8971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C484A09C-6075-4EAE-88BD-1FC2669B8971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490D1A2A-D950-4915-87CC-6B43A49F8A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490D1A2A-D950-4915-87CC-6B43A49F8A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490D1A2A-D950-4915-87CC-6B43A49F8A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490D1A2A-D950-4915-87CC-6B43A49F8A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

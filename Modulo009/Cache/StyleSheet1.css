@@ -1,0 +1,18 @@
+﻿body {
+    margin: 20px 10px 20px 10px;
+    font-family:'Courier New';
+}
+
+a {
+    margin-right: 10px;
+    padding: 10px 30px;
+    background-color: #666;
+    text-decoration: none;
+    color: #aaa;
+}
+
+    a:hover {
+        background-color: #666;
+        text-decoration: none;
+        color: #fff;
+    }

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-latest.js" ></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: 'http://localhost:5636/HtmlPage2.html',
+            type: 'GET',
+            timeout: 12000,
+            dataType: 'text',
+            data: {
+                nome: "agnaldo",
+                senha: "123456"
+            }
+        })
+            .done(function (responseText) {
+                $('#txt').text(responseText);
+            })
+            .fail(function () {
+                alert('Oooops...');
+            });
+    </script>
+</head>
+<body>
+    <div id="txt"></div>
+</body>
+</html>

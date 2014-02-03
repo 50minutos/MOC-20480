@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        html, body {
+            height:100%;
+            width: 100%;
+        }
+        
+        #header, #content, #footer {
+            width: 100%;
+        }
+
+        #header, #footer {
+            background-color: #ccc;
+        }
+
+        #content {
+            height:50%;
+        }
+
+        #left, #right {
+            display:inline-block;
+        }
+
+        #left {
+            background-color: #ff0;
+            width: 30%;
+        }
+
+        #right {
+            background-color: #0f0;
+            padding: 10px;
+            width: calc(70% - 24px);
+        }
+
+            #right table {
+                border: 1px solid #000;
+                margin: 0px auto;
+                border-collapse: collapse;
+            }
+
+                #right table tr td, #right table tr th {
+                    border: 1px solid #000;
+                    margin: 0px auto;
+                }
+    </style>
+</head>
+<body>
+    <div id="header">hhh</div>
+    <div id="content">
+        <div id="left">
+            <p>aaa</p>
+            <p>bbb</p>
+            <p>ccc</p>
+            <p>ddd</p>
+        </div>
+        <div id="right">
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+                <tr>
+                    <td>agnaldo</td>
+                    <td>agnaldo@50minutos.com.br</td>
+                </tr>
+                <tr>
+                    <td>zé</td>
+                    <td>ze@50minutos.com.br</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="footer">fff</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function mostrarPosicao(p) {
+            document.getElementById("demo")
+                .innerHTML = "latitude = " + p.coords.latitude
+                    + "<br/>longitude = " + p.coords.longitude
+                    + "<br/>accuracy = " + p.coords.accuracy
+                    + "<br/>altitude = " + p.coords.altitude
+                    + "<br/>altitude accuracy = " + p.coords.altitudeAccuracy
+                    + "<br/>heading = " + p.coords.heading
+                    + "<br/>speed = " + p.coords.speed;
+
+            var latlong = p.coords.latitude + "," + p.coords.longitude;
+
+            var img = "http://maps.googleapis.com/maps/api/staticmap?center="
+            + latlong + "&zoom=14&size=800x400&sensor=false";
+
+            document.getElementById("mapa").innerHTML = "<img src='" + img + "'/>";
+        }
+
+        function mostrarErros(e) {
+            switch (e.code) {
+                case e.PERMISSION_DENIED:
+                    document.getElementById("demo").innerHTML = "usuário negou acesso à geolocalização";
+                    break;
+                case e.POSITION_UNAVAILABLE:
+                    document.getElementById("demo").innerHTML = "informação de posição indisponível";
+                    break;
+                case e.TIMEOUT:
+                    document.getElementById("demo").innerHTML = "timeout";
+                    break;
+                case e.UNKNOWN_ERROR:
+                    document.getElementById("demo").innerHTML = "erro desconhecido";
+                    break;
+            }
+        }
+
+        function processar() {
+            navigator.geolocation.getCurrentPosition(mostrarPosicao, mostrarErros);
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="button" onclick="javascript:processar();" value="Clique aqui" />
+<div id="mapa"></div>
+</body>
+</html>
